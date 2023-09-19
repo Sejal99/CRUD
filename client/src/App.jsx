@@ -1,17 +1,11 @@
 import React from 'react'
+import Home from './components/Home'
 
 const App = () => {
   return (
     <div>
-  
-<h1 style={{textAlign:"center"}}>Todo App</h1>
-
-  <div style={{textAlign:"center"}} className='input_holder'>
-    <input type="text" placeholder='Add a todo'/>
-    <button>Add</button>
-  </div>
+     <Home />
     </div>
-  
   )
 }
 

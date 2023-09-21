@@ -4,10 +4,22 @@ import axios from 'axios'
 const Home = () => {
     const [todos,setTodos]=useState([])
     console.log(todos);
+    
+
+
     useEffect(()=>{
-        axios.get('http://localhost:5000/api/get')
-        .then(result=>setTodos(result.data))
-        .catch(err=>console.log(err));
+      const fun=async()=>{
+        try {
+          const res= await axios.get('http://localhost:5000/api/get')
+          console.log(res.data);
+          setTodos(res.data);
+
+        } catch (error) {
+          console.log(error);
+        }
+              }
+
+      fun()
     },[])
 
   return (

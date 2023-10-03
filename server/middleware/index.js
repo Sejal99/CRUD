@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const { Response } = require('express');
- // This should be in an environment variable in a real application
+
 
 const authenticateJwt = (req, res, next) => {
   const authHeader = req.headers.authorization;
